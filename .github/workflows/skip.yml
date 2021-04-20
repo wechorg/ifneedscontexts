@@ -20,7 +20,8 @@ jobs:
     needs:
       - always-skipped
       - always-success
-    if: "!(failure() || cancelled())"
+#     if: "!(failure() || cancelled())"
+    if: false
     steps:
       - shell: bash
         run: echo "What happens here"
