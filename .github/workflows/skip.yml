@@ -21,7 +21,7 @@ jobs:
       - always-skipped
       - always-success
 #     if: "!(failure() || cancelled())"
-    if: "some random string"
+    if: "!(failure())"
     steps:
       - shell: bash
         run: echo "What happens here"
