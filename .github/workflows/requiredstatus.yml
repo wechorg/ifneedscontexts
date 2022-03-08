@@ -12,6 +12,7 @@ jobs:
   test-status-check:
     name: test-status-check
     runs-on: ubuntu-latest
+    if: always()
     needs: test-fail-job
     steps:
       - name: Test status of needs job Failure
