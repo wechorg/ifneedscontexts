@@ -19,7 +19,7 @@ jobs:
     needs: test-fail-job
     steps:
       - name: Fail step
-        if: needs.test-fail-job.result !== 'success'
+        if: ${{ needs.test-fail-job.result != 'success' }}
         run: |
           echo "${{ toJSON(needs.test-fail-job) }}"
           exit 1
