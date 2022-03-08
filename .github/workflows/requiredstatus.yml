@@ -20,5 +20,5 @@ jobs:
     steps:
       - name: Test status of needs job Failure
         run: |
-          echo "this should never run"
-          exit 1
+          echo "${{ toJSON(needs.test-fail-job) }}"
+          exit 0
