@@ -11,7 +11,7 @@ jobs:
       - name: Always fail job
         run: |
           echo "I failed :("
-          exit 0
+          exit 1
   test-status-check:
     name: test-status-check
     runs-on: ubuntu-latest
