@@ -23,3 +23,5 @@ jobs:
         run: |
           echo "${{ toJSON(needs.test-fail-job) }}"
           exit 1
+      - name: Additional step
+        run: echo "I will run only if the independent job completed with 'success'"
