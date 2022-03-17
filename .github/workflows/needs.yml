@@ -18,6 +18,7 @@ jobs:
     needs: job1
     if: ${{ needs.job1.outputs.output1 != 'hello'  && (github.event_name == 'push' || github.event_name == 'pull_request') }}
     steps:
+    
       - run: echo "${{needs.job1.outputs.output1}}"
   job3:
     runs-on: ubuntu-latest
